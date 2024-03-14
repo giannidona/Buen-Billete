@@ -28,7 +28,7 @@ export default async function Home() {
             </CardContent>
             <CardFooter>
               <p className="text-xs text-gray-600">
-                Last Updated:{" "}
+                Última actualización:{" "}
                 {formatDate(CryptoValue[cryptoKey].last_updated_at)}
               </p>
             </CardFooter>

@@ -12,6 +12,11 @@ export default async function Home() {
 
   const DolarOficialData = await DolarOficial();
 
+  const formatDateString = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleString("es-AR");
+  };
+
   return (
     <>
       <h2 className="text-center my-10 text-2xl">DOLAR</h2>
@@ -26,7 +31,8 @@ export default async function Home() {
           </CardContent>
           <CardFooter>
             <p className="text-xs text-gray-600">
-              ultima actualización: {DolarBlueData.fechaActualizacion}
+              Última actualización:{" "}
+              {formatDateString(DolarBlueData.fechaActualizacion)}
             </p>
           </CardFooter>
         </Card>
@@ -39,8 +45,9 @@ export default async function Home() {
             <p>VENTA: {DolarOficialData.venta}</p>
           </CardContent>
           <CardFooter>
-            <p className="text-xs">
-              ultima actualización: {DolarOficialData.fechaActualizacion}
+            <p className="text-xs text-gray-600">
+              Última actualización:{" "}
+              {formatDateString(DolarOficialData.fechaActualizacion)}
             </p>
           </CardFooter>
         </Card>
