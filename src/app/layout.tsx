@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <div className="flex">
           <SideNavbar />
-          <div className="p-8">{children}</div>
+          <div className="p-8 w-full ">{children}</div>
         </div>
       </body>
     </html>
